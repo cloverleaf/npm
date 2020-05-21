@@ -1,0 +1,23 @@
+{
+  "name": "cloverleaf",
+  "version": "1.0.0",
+  "description": "The brains behind the Cloverleaf password app",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test-files/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cloverleaf/npm.git"
+  },
+  "author": "ChildishGiant",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cloverleaf/npm/issues"
+  },
+  "homepage": "https://github.com/cloverleaf/npm#readme",
+  "dependencies": {
+    "js-sha3": "^0.8.0",
+    "seedrandom": "^3.0.5"
+  }
+}

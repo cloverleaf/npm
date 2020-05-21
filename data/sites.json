@@ -1,0 +1,542 @@
+{
+  "Ada": {
+    "minLength": 8
+  },
+  "Adobe": {
+    "minLength": 8,
+    "maxLength": 100,
+    "requirements": ["num", "low", "cap"]
+  },
+  "Airbnb": {
+    "minLength": 8,
+    "maxLength": 128,
+    "requirements": ["low", "num", "special"]
+  },
+  "AliExpress": {
+    "chars": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "minLength": 6,
+    "maxLength": 20
+  },
+  "Alipay": {
+    "alias": "AliExpress"
+  },
+  "allegorithmic": {
+    "minLength": 1
+  },
+  "AlternativeTo": {
+    "minLength": 8,
+    "requirements": ["low", "num"]
+  },
+  "Amazon": {
+    "minLength": 6
+  },
+  "Amino": {
+    "minLength": 6
+  },
+  "Apple": {
+    "minLength": 8,
+    "maxLength": 32,
+    "requirements": ["low", "num", "cap"]
+  },
+  "Artsy": {
+    "minLength": 6,
+    "maxLength": 128
+  },
+  "Baidu": {
+    "minLength": 6,
+    "maxLength": 14
+  },
+  "BBC": {
+    "minLength": 8,
+    "maxLength": 50,
+    "requirements": ["low", "num", "cap"],
+    "chars": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&()*+,-./:;<=>?@[\\]^_`{|}~"
+  },
+  "Behance": {
+    "alias": "Adobe"
+  },
+  "Bing": {
+    "alias": "Microsoft"
+  },
+  "Blend Swap": {
+    "minLength": 8
+  },
+  "Blizzard": {
+    "minLength": 8,
+    "maxLength": 16,
+    "requirements": ["low", "num"]
+  },
+  "Channel 4": {
+    "minLength": 6,
+    "maxLength": 255
+  },
+  "Chrono.gg": {
+    "minLength": 8
+  },
+  "CodePen": {
+    "minLength": 1
+  },
+  "DeviantArt": {
+    "minLength": 6
+  },
+  "Discord": {
+    "minLength": 6,
+    "maxLength": 128
+  },
+  "Disqus": {
+    "minLength": 6
+  },
+  "Dribbble": {
+    "minLength": 6,
+    "maxLength": 128
+  },
+  "Dropbox": {
+    "minLength": 6
+  },
+  "Duolingo": {
+    "minLength": 6
+  },
+  "eBay": {
+    "minLength": 6,
+    "maxLength": 64,
+    "requirements": ["low", "num"],
+    "chars": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!\"#$%&'()*+,-.;=?@\\^_`{|}~"
+  },
+  "Epic Games": {
+    "minLength": 7,
+    "requirements": ["low", "num"],
+    "chars": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&()*+,-./:;<=>?@[\\]^_`{|}~"
+  },
+  "Etsy": {
+    "minLength": 6,
+    "maxLength": 152
+  },
+  "Evernote": {
+    "minLength": 6,
+    "maxLength": 64
+  },
+  "Facebook": {
+    "minLength": 6
+  },
+  "Factorio": {
+    "minLength": 5
+  },
+  "Fanatical": {
+    "minLength": 6
+  },
+  "FANDOM": {
+    "minLength": 1,
+    "maxLength": 50
+  },
+  "Firebox": {
+    "minLength": 7,
+    "requirements": ["low", "num"]
+  },
+  "Firefox": {
+    "minLength": 8
+  },
+  "Flickr": {
+    "alias": "Yahoo"
+  },
+  "Forvo": {
+    "minLength": 4,
+    "maxLength": 28
+  },
+  "Freelancer": {
+    "minLength": 6,
+    "requirements": ["low", "num"]
+  },
+  "Genius": {
+    "minLength": 4,
+    "maxLength": 128
+  },
+  "GeoGuessr": {
+    "minLength": 5
+  },
+  "Gfycat": {
+    "minLength": 8,
+    "maxLength": 25
+  },
+  "giffgaff": {
+    "requirements": ["cap", "low", "num"],
+    "minLength": 8
+  },
+  "GIPHY": {
+    "minLength": 1,
+    "maxLength": 128
+  },
+  "GitHub": {
+    "minLength": 7,
+    "maxLength": 72,
+    "requirements": ["low", "num"]
+  },
+  "GitLab": {
+    "minLength": 8,
+    "maxLength": 128
+  },
+  "Government Gateway": {
+    "minLength": 8,
+    "maxLength": 12,
+    "requirements": ["low", "num"],
+    "chars": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  },
+  "Guilded": {
+    "minLength": 8,
+    "maxLength": 128
+  },
+  "GOG": {
+    "minLength": 2
+  },
+  "Google": {
+    "minLength": 8,
+    "maxLength": 100
+  },
+  "The Guardian": {
+    "minLength": 6,
+    "maxLength": 72
+  },
+  "HitFilm": {
+    "minLength": 8,
+    "maxLength": 25
+  },
+  "Hi-Rez": {
+    "minLength": 7,
+    "maxLength": 20,
+    "chars": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  },
+  "Humble Bundle": {
+    "minLength": 4
+  },
+  "IFTTT": {
+    "minLength": 6
+  },
+  "IMDb": {
+    "minLength": 8,
+    "maxLength": 1024
+  },
+  "imgur": {
+    "minLength": 6,
+    "maxLength": 255,
+    "requirements": ["num", "low"]
+  },
+  "Instagram": {
+    "minLength": 6,
+    "maxLength": 255
+  },
+  "itch.io": {
+    "minLength": 2
+  },
+  "itv": {
+    "minLength": 6,
+    "maxLength": 100
+  },
+  "JustGiving": {
+    "minLength": 6
+  },
+  "Keybase": {
+    "minLength": 6
+  },
+  "Ko-fi": {
+    "minLength": 6,
+    "maxLength": 100
+  },
+  "last.fm": {
+    "minLength": 6,
+    "maxLength": 128,
+    "requirements": ["num", "special"]
+  },
+  "lernu": {
+    "minLength": 5
+  },
+  "Lingvist": {
+    "minLength": 8
+  },
+  "LinkedIn": {
+    "minLength": 6
+  },
+  "Lloyds Bank": {
+    "minLength": 8,
+    "maxLength": 15,
+    "chars": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  },
+  "mailbox.org": {
+    "minLength": 6,
+    "requirements": ["cap", "low", "num"],
+    "chars": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$\"%&/()=*+-#.,;:@?{}[]"
+  },
+  "Mail.Ru": {
+    "requirements": ["special", "num", "low"],
+    "minLength": 6,
+    "maxLength": 40
+  },
+  "Mapbox": {
+    "minLength": 8,
+    "maxLength": 512
+  },
+  "Mega": {
+    "minLength": 8
+  },
+  "Messenger": {
+    "alias": "Facebook"
+  },
+  "Microsoft": {
+    "requirements": ["cap", "low"],
+    "minLength": 8,
+    "maxLength": 127
+  },
+  "Minecraft": {
+    "alias": "Mojang"
+  },
+  "Mojang": {
+    "minLength": 8,
+    "maxLength": 256
+  },
+  "MSN": {
+    "alias": "Microsoft"
+  },
+  "MuseScore": {
+    "minLength": 1,
+    "maxLength": 128
+  },
+  "My Nintendo": {
+    "minLength": 8,
+    "maxLength": 20,
+    "requirements": ["cap", "low"]
+  },
+  "Nectar": {
+    "minLength": 8,
+    "maxLength": 100,
+    "requirements": ["num", "cap", "low"],
+    "chars": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!\"#$%&'()*,-./:;<=>?@[\\]^_`{|}~"
+  },
+  "Netflix": {
+    "minLength": 4,
+    "maxLength": 50
+  },
+  "Native Instruments": {
+    "minLength": 10,
+    "maxLength": 60,
+    "requirements": ["special"]
+  },
+  "Opera": {
+    "minLength": 12,
+    "maxLength": 1000
+  },
+  "OpenStreetMap": {
+    "minLength": 8,
+    "maxLength": 255
+  },
+  "Origin": {
+    "minLength": 8,
+    "maxLength": 16,
+    "chars": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "requirements": ["cap", "low", "num"]
+  },
+  "osu!": {
+    "minLength": 8
+  },
+  "Oxfam": {
+    "minLength": 6
+  },
+  "Pastebin": {
+    "minLength": 4
+  },
+  "Patient Access": {
+    "minLength": 8,
+    "maxLength": 99,
+    "requirements": ["num", "cap", "low"]
+  },
+  "Patreon": {
+    "minLength": 6
+  },
+  "PayPal": {
+    "requirements": ["num"],
+    "minLength": 8,
+    "maxLength": 20
+  },
+  "paysafecard": {
+    "minLength": 8,
+    "requirements": ["cap", "special"],
+    "maxLength": 110
+  },
+  "PCPartPicker": {
+    "minLength": 1
+  },
+  "Pinterest": {
+    "minLength": 6,
+    "requirements": ["low", "num"]
+  },
+  "pixiv": {
+    "minLength": 6,
+    "maxLength": 72,
+    "chars": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  },
+  "plug.dj": {
+    "minLength": 8,
+    "maxLength": 128,
+    "requirements": ["low"]
+  },
+  "Pocket": {
+    "minLength": 6
+  },
+  "Prezi": {
+    "minLength": 8,
+    "maxLength": 128
+  },
+  "QQ": {
+    "minLength": 8,
+    "maxLength": 16,
+    "requirements": ["low", "num"]
+  },
+  "Reddit": {
+    "minLength": 6
+  },
+  "Riot Games": {
+    "minLength": 8,
+    "maxLength": 128,
+    "requirements": ["low", "num"]
+  },
+  "Rockstar Games Social Club": {
+    "minLength": 8,
+    "maxLength": 30,
+    "requirements": ["num", "cap"]
+  },
+  "Sainsbury's": {
+    "minLength": 8,
+    "maxLength": 100,
+    "requirements": ["num", "cap", "low"],
+    "chars": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!\"#$%&'()*,-./:;<=>?@[\\]^_`{|}~"
+  },
+  "Skype": {
+    "alias": "Microsoft"
+  },
+  "Snapchat": {
+    "minLength": 8,
+    "requirements": ["num", "cap"]
+  },
+  "Songsterr": {
+    "minLength": 5,
+    "maxLength": 200
+  },
+  "Soundcloud": {
+    "minLength": 6,
+    "maxLength": 2048
+  },
+  "Spotify": {
+    "minLength": 4
+  },
+  "Square Enix": {
+    "minLength": 6,
+    "maxLength": 32,
+    "chars": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!\"(#$%&')=~|`{+*}<>?_-^@[;:],./"
+  },
+  "Stack Overflow": {
+    "minLength": 8,
+    "requirements": ["low", "num"]
+  },
+  "Steam": {
+    "minLength": 8
+  },
+  "StellarX": {
+    "minLength": 8,
+    "maxLength": 50,
+    "requirements": ["cap", "low", "num"],
+    "regex": "^(?!.*(.)\\1{2,}).+"
+  },
+  "Streamable": {
+    "minLength": 6
+  },
+  "Tesco": {
+    "minLength": 8,
+    "maxLength": 45,
+    "requirements": ["low", "cap", "special"]
+  },
+  "TheCubicle.us": {
+    "minLength": 5
+  },
+  "tic.computer": {
+    "minLength": 6
+  },
+  "Trello": {
+    "minLength": 8
+  },
+  "Tumblr": {
+    "alias": "Yahoo"
+  },
+  "Twitch": {
+    "minLength": 8
+  },
+  "Twitter": {
+    "minLength": 6
+  },
+  "Uber": {
+    "minLength": 5,
+    "maxLength": 512
+  },
+  "Ubisoft": {
+    "minLength": 8,
+    "maxLength": 16
+  },
+  "UCAS": {
+    "minLength": 8,
+    "maxLength": 14,
+    "requirements": ["cap", "low", "num", "special"]
+  },
+  "Unity ID": {
+    "minLength": 8,
+    "maxLength": 72,
+    "requirements": ["cap", "low", "num"]
+  },
+  "Uplay": {
+    "alias": "Ubisoft"
+  },
+  "Venmo": {
+    "minLength": 8,
+    "maxLength": 32
+  },
+  "Vimeo": {
+    "requirements": ["cap", "low", "num", "special"],
+    "minLength": 8,
+    "maxLength": 72
+  },
+  "Visa Checkout": {
+    "chars": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "minLength": 8,
+    "maxLength": 32
+  },
+  "Vivaldi": {
+    "minLength": 8,
+    "maxLength": 254
+  },
+  "VK": {
+    "minLength": 6
+  },
+  "WeChat": {
+    "alias": "QQ"
+  },
+  "Wikipedia": {
+    "minLength": 1
+  },
+  "Wordpress": {
+    "minLength": 6,
+    "chars": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!\"#$%&'()*+,-./:;<=>?@[]^_`{|}~",
+    "requirements": ["cap", "low", "num", "special"]
+  },
+  "Xbox": {
+    "alias": "Microsoft"
+  },
+  "XDA Developers": {
+    "minLength": 1,
+    "maxLength": 50
+  },
+  "Yahoo": {
+    "minLength": 8,
+    "requirements": ["low", "num"]
+  },
+  "YouTube": {
+    "alias": "Google"
+  },
+  "YoYo Games": {
+    "minLength": 6
+  }
+}
