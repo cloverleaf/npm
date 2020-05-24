@@ -9,6 +9,7 @@ jobs:
 
     - name: Install dependencies
       run: |
+        npm i
         cd unit_tests
         # sudo apt-get install xvfb firefox
         python3 -m pip install -r requirements.txt
