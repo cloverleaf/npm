@@ -24,6 +24,7 @@ const possibleRequirements = {
  * @param {string} mode "insecure" for the insecure mode or any other string for the newer password generation
  * @returns {(string|null)} Output password or null if invalid inputs
  */
+// eslint-disable-next-line complexity
 function process (appName, masterPass, length, presetToggle, mode) {
 	let minLength = defaultMinLength;
 	let maxLength = defaultMaxLength;
@@ -108,12 +109,14 @@ function process (appName, masterPass, length, presetToggle, mode) {
 
 	}
 
+	// Make app name lowercase to make sure
+	appName = appName.toLowerCase();
 
 	// Set the generation seed
 	if (mode !== "insecure") {
-		Math.seedrandom(keccak512(appName.toLowerCase() + masterPass));
+		Math.seedrandom(keccak512(appName + masterPass));
 	} else {
-		Math.seedrandom(appName.toLowerCase() + masterPass);
+		Math.seedrandom(appName + masterPass);
 	}
 
 	// password generation cycle

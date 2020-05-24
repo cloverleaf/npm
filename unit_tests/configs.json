@@ -1,0 +1,18 @@
+{
+	"minimum length": {
+		"length": 1,
+		"password": "DO NOT USE THIS PASSWORD - Your security is at stake"
+	},
+	"maximum length": {
+		"length": 999,
+		"password": "DO NOT USE THIS PASSWORD - Your security is at stake"
+	},
+	"minimum length - alternate": {
+		"length": 1,
+		"password": "DO NOT USE THIS PASSWORD - Your security is still at stake"
+	},
+	"maximum length - alternate": {
+		"length": 999,
+		"password": "DO NOT USE THIS PASSWORD - Your security is still at stake"
+	}
+}
