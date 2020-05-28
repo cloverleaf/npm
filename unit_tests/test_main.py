@@ -42,13 +42,8 @@ def test_all_presets():
                     assert response == results[config][site]["result"], "Preset \"{}\" not functioning correctly.".format(site)
 
                 else:
-                    # try:
-                    results[config][site] = {"result": response}
-                    # except KeyError:
-
-                    #     results[config] = {}
-                    #     results[config][site] = {"result": response}
                     print("Adding {} to config {}".format(site, config))
+                    results[config][site] = {"result": response}
 
     with open("results.json", 'w', encoding='utf-8') as json_file:
         json.dump(results, json_file, ensure_ascii=False, indent=4)

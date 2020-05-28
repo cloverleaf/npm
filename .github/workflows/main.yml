@@ -6,6 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+      with:
+        ref: ${{ github.head_ref }}
 
     - name: Install dependencies
       run: |
@@ -26,3 +28,8 @@ jobs:
       run: |
         cd unit_tests
         python3 -m pytest -s
+
+    - name: Save new test results
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Save new test results
