@@ -14,5 +14,13 @@
 	"maximum length - alternate": {
 		"length": 999,
 		"password": "DO NOT USE THIS PASSWORD - Your security is still at stake"
+	},
+	"default length": {
+		"length": 16,
+		"password": "DO NOT USE THIS PASSWORD - Your security is at stake"
+	},
+	"default length - alternate": {
+		"length": 16,
+		"password": "DO NOT USE THIS PASSWORD - Your security is still at stake"
 	}
 }

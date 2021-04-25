@@ -303,6 +303,11 @@
     "maxLength": 20,
     "requirements": ["cap", "low"]
   },
+  "Native Instruments": {
+    "minLength": 10,
+    "maxLength": 60,
+    "requirements": ["special"]
+  },
   "Nectar": {
     "minLength": 8,
     "maxLength": 100,
@@ -312,11 +317,6 @@
   "Netflix": {
     "minLength": 4,
     "maxLength": 50
-  },
-  "Native Instruments": {
-    "minLength": 10,
-    "maxLength": 60,
-    "requirements": ["special"]
   },
   "Opera": {
     "minLength": 12,
@@ -456,6 +456,12 @@
   },
   "tic.computer": {
     "minLength": 6
+  },
+  "TikTok": {
+    "minLength": 8,
+    "maxLength": 20,
+    "requirements": ["low", "num", "special"],
+    "chars": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&()*+,-./:;<=>?@[\\]^_|~"
   },
   "Trello": {
     "minLength": 8

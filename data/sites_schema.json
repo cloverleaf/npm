@@ -32,8 +32,11 @@
 						"type": "string"
 					}
 				}
-
 			},
+			"anyOf": [
+				{ "required": ["alias"]},
+				{"required": ["minLength"]}
+			],
 			"type": "object",
 			"additionalProperties": false
 		}

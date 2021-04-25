@@ -1,3 +1,3 @@
-var cloverleaf = require("../index.js");
+const cloverleaf = require('../index.js')
 
-console.log(cloverleaf.process("Apple", "123", 12, false, "new"));
+console.log(cloverleaf.process('TikfTok', '123', false))

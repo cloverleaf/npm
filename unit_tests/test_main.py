@@ -1,13 +1,25 @@
 import pytest
 import json
 import subprocess
-import sys
 
-
+defaultMinLength = 4
+defaultMaxLength = 512
 sites = {}
 
 with open("../data/sites.json", 'r') as json_file:
     sites = json.load(json_file)
+
+
+def test_lengths():
+
+    for length in range(defaultMinLength, defaultMaxLength):
+
+        batcmd = "node -e \"console.log(require('../index').process('a', 'a', false, {}))\"".format(length)
+        response = subprocess.check_output(batcmd, shell=True).decode("utf-8")[:-1]
+
+        # print(response, len(response), length)
+
+        assert len(response) == length
 
 
 def test_all_presets():
@@ -30,9 +42,9 @@ def test_all_presets():
                 password = configs[config]["password"]
                 length = configs[config]["length"]
 
-                batcmd = "node -e \"console.log(require('../index').process('{}', '{}', {}, true, 'new'))\"".format(siteCMD, password, length)
+                batcmd = "node -e \"console.log(require('../index').process('{}', '{}', true, {}))\"".format(siteCMD, password, length)
 
-                response = subprocess.check_output(batcmd, shell=True).decode("utf-8")
+                response = subprocess.check_output(batcmd, shell=True).decode("utf-8")[:-1]
 
                 if config not in results:
                     print("Adding {} config".format(config))
