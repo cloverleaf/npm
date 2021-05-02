@@ -409,6 +409,10 @@
     "maxLength": 30,
     "requirements": ["num", "cap"]
   },
+  "Rotten Tomatoes": {
+    "minLength": 8,
+    "requirements": ["low","special"]
+  },
   "Sainsbury's": {
     "minLength": 8,
     "maxLength": 100,
