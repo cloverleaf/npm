@@ -20,10 +20,17 @@ const possibleRequirements = {
  * @param {string} masterPass
  * @param {boolean} presetToggle True if we want to use a preset
  * @param {number} length int - Desired length of the password
- * @returns {(string|null)} Output password or null if invalid inputs
+ * @returns {string} Output password
  */
-// eslint-disable-next-line complexity
 function process (appName, masterPass, presetToggle = false, length = defaultLength) {
+  // Ensure types
+  if (typeof appName !== 'string') throw new Error('App name must be a string')
+  if (appName.length < 1) throw new Error('App name must be more than 0 characters')
+  if (typeof masterPass !== 'string') throw new Error('Master password must be a string')
+  if (masterPass.length < 1) throw new Error('Master password must be more than 0 characters')
+  if (typeof presetToggle !== 'boolean') throw new Error('presetToggle must be a boolean')
+  if (typeof length !== 'number') throw new Error('length must be a number')
+
   let minLength = defaultMinLength
   let maxLength = defaultMaxLength
   let chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~" // Defualt character set (Set here but overwritten if there's a custom one.)
@@ -173,5 +180,11 @@ function process (appName, masterPass, presetToggle = false, length = defaultLen
   return result
 }
 
-exports.process = process
-exports.siteData = jsonData
+module.exports = {
+  process,
+  siteData: jsonData,
+  defaultLength,
+  defaultMinLength,
+  defaultMaxLength,
+  possibleRequirements
+}
