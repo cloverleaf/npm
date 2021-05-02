@@ -1,15 +1,10 @@
 {
-	"folders": [{
-		"path": "."
-	}],
-	"settings": {
-		"json.schemas": [
-			{
-				"fileMatch": [
-					"data/sites.json"
-				],
-				"url": "data/sites_schema.json"
-			},
-		]
-	}
+	"json.schemas": [
+		{
+			"fileMatch": [
+				"/data/sites.json"
+			],
+			"url": "/data/sites_schema.json"
+		},
+	]
 }

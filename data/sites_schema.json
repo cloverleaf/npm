@@ -17,7 +17,8 @@
 				},
 				"minLength": {
 					"minimum": 1,
-					"type": "integer"
+					"type": "integer",
+					"description": "The minimum length of a password allowed on this preset (inclusive)"
 				},
 				"regex": {
 					"type": "string",
@@ -29,7 +30,8 @@
 					"maxItems": 4,
 					"uniqueItems": true,
 					"items": {
-						"type": "string"
+						"type": "string",
+						"enum": ["cap",	"low", "num",	"special"]
 					}
 				}
 			},
