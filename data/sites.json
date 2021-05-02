@@ -560,5 +560,9 @@
   },
   "YoYo Games": {
     "minLength": 6
+  },
+  "Zoom": {
+    "minLength": 8,
+    "requirements": ["cap","low","num","special"]
   }
 }
