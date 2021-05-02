@@ -551,6 +551,10 @@
     "minLength": 8,
     "requirements": ["low", "num"]
   },
+  "Yelp":{
+    "minLength": 6,
+    "maxLength": 200
+  },
   "YouTube": {
     "alias": "Google"
   },
