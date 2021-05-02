@@ -383,6 +383,9 @@
     "minLength": 8,
     "maxLength": 128
   },
+  "Protonmail": {
+    "minLength": 1
+  },
   "QQ": {
     "minLength": 8,
     "maxLength": 16,
