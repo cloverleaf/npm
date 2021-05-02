@@ -386,6 +386,11 @@
   "Protonmail": {
     "minLength": 1
   },
+  "Quora": {
+    "minLength": 8,
+    "maxLength": 75,
+    "requirements": ["low","cap","num"]
+  },
   "QQ": {
     "minLength": 8,
     "maxLength": 16,
