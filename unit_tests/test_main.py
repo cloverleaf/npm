@@ -22,14 +22,19 @@ def test_lengths():
         assert len(response) == length
 
 
+def requirements_lengths():
+
+    for site in sites:
+        if "requirements" in sites[site]:
+            assert sites[site]["minLength"] > len(sites[site]["requirements"])
+
+
 def test_all_presets():
 
     results = {}
 
     with open("results.json", 'r') as json_file:
         results = json.load(json_file)
-
-    test_password = "Test password"
 
     with open("configs.json", 'r') as json_file:
         configs = json.load(json_file)
