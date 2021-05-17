@@ -73,6 +73,10 @@
   "Chrono.gg": {
     "minLength": 8
   },
+  "Club Penguin Rewritten": {
+    "minLength": 8,
+    "requirements": ["cap","num"]
+  },
   "CodePen": {
     "minLength": 1
   },
