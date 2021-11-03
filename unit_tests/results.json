@@ -446,6 +446,9 @@
         },
         "Uphold": {
             "result": "gw+1<])M"
+        },
+        "Plusnet": {
+            "result": "nF<w1K*6"
         }
     },
     "maximum length": {
@@ -895,6 +898,9 @@
         },
         "Uphold": {
             "result": "gw+1<])MDg^(+2FxRn\"mF\\jg\\}u^*b'l|Y[`yCHc<Ueh~8.A|~*EuOG#YhM%f|*U73pdI?kX"
+        },
+        "Plusnet": {
+            "result": "d;Ku%oSJnF<w1K*6"
         }
     },
     "minimum length - alternate": {
@@ -1344,6 +1350,9 @@
         },
         "Uphold": {
             "result": "%wK[%S3?"
+        },
+        "Plusnet": {
+            "result": ";I9x6-/w"
         }
     },
     "maximum length - alternate": {
@@ -1793,6 +1802,9 @@
         },
         "Uphold": {
             "result": "%wK[%S3?c]n^A4-KuS.r@1oM~Wsfo7fL|Sp4^33J/Yw@E]<1n59\\3i)c<hUJ}V`v/u(rc0*N"
+        },
+        "Plusnet": {
+            "result": ";I9x6-/wyycg(#LT"
         }
     },
     "default length": {
@@ -2242,6 +2254,9 @@
         },
         "Uphold": {
             "result": "gw+1<])MDg^(+2Fx"
+        },
+        "Plusnet": {
+            "result": "d;Ku%oSJnF<w1K*6"
         }
     },
     "default length - alternate": {
@@ -2691,6 +2706,9 @@
         },
         "Uphold": {
             "result": "%wK[%S3?c]n^A4-K"
+        },
+        "Plusnet": {
+            "result": ";I9x6-/wyycg(#LT"
         }
     }
 }
