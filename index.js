@@ -119,7 +119,8 @@ function process (appName, masterPass, presetToggle = false, length = defaultLen
   Math.seedrandom(keccak512(appName + masterPass))
 
   // password generation cycle
-  while (true) {
+  go = true
+  while (go) {
     result = ''
     while (result.length < length) {
       // Add one seeded random character at a time
@@ -128,7 +129,7 @@ function process (appName, masterPass, presetToggle = false, length = defaultLen
 
     // If there's requirements to forfill
     if (requirements.length !== 0 || regex) {
-      let nope = false
+      let failedTests = false
       for (let j = 0; j < requirements.length; j++) {
         // For each requirement
         for (let c = 0; c < requirements[j].length; c++) {
@@ -144,34 +145,34 @@ function process (appName, masterPass, presetToggle = false, length = defaultLen
           if (
             requirements[j].indexOf(requirements[j][c]) === requirements[j].length - 1
           ) {
-            nope = true
+            failedTests = true
             break
           }
         }
 
         // If it's already failed a requirement
-        if (nope) {
+        if (failedTests) {
           // Don't bother checking the rest
           break
         }
       }
 
       // If there's a regex and we've not already failed
-      if (regex && !nope) {
+      if (regex && !failedTests) {
         // See if the generated password fails the regex
         if (!regex.test(result)) {
-          nope = true
+          failedTests = true
         }
       }
 
-      if (!nope) {
+      if (!failedTests) {
         // If all tests passed
-        break
+        go = false
         // Stop trying new passwords
       }
     } else {
       // No requirements, including regexes
-      break
+      go = false
       // Stop trying new passwords
     }
   }
