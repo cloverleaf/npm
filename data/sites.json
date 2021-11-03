@@ -380,6 +380,12 @@
     "maxLength": 128,
     "requirements": ["low"]
   },
+  "Plusnet": {
+    "minLength": 8,
+    "maxLength": 16,
+    "requirements": ["cap", "num", "special"],
+    "chars": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&()*+,-./:;<=>?[]^_`{}~"
+  },
   "Pocket": {
     "minLength": 6
   },
