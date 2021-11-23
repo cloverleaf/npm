@@ -77,6 +77,10 @@
   "CodePen": {
     "minLength": 1
   },
+  "data.world": {
+    "minLength": 8,
+    "requirements": ["cap","special"]
+  },
   "DeviantArt": {
     "minLength": 6
   },
@@ -139,6 +143,9 @@
   "Firefox": {
     "minLength": 8
   },
+  "FirstBus": {
+    "minLength": 1
+  },
   "Flickr": {
     "alias": "Yahoo"
   },
@@ -174,19 +181,15 @@
     "maxLength": 72,
     "requirements": ["low", "num"]
   },
+  "Glassdoor": {
+    "minLength": 8
+  },
   "GitLab": {
     "minLength": 8,
     "maxLength": 128
   },
-  "Government Gateway": {
-    "minLength": 8,
-    "maxLength": 12,
-    "requirements": ["low", "num"],
-    "chars": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-  },
-  "Guilded": {
-    "minLength": 8,
-    "maxLength": 128
+  "GoDaddy": {
+    "minLength": 9
   },
   "GOG": {
     "minLength": 2
@@ -195,9 +198,19 @@
     "minLength": 8,
     "maxLength": 100
   },
+  "Government Gateway": {
+    "minLength": 8,
+    "maxLength": 12,
+    "requirements": ["low", "num"],
+    "chars": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  },
   "The Guardian": {
     "minLength": 6,
     "maxLength": 72
+  },
+  "Guilded": {
+    "minLength": 8,
+    "maxLength": 128
   },
   "HitFilm": {
     "minLength": 8,
@@ -428,6 +441,9 @@
     "maxLength": 100,
     "requirements": ["num", "cap", "low"],
     "chars": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!\"#$%&'()*,-./:;<=>?@[\\]^_`{|}~"
+  },
+  "Shopify": {
+    "minLength": 5
   },
   "Skype": {
     "alias": "Microsoft"
