@@ -449,6 +449,9 @@
         },
         "Plusnet": {
             "result": "nF<w1K*6"
+        },
+        "Starbreeze": {
+            "result": "qVMK|V0o"
         }
     },
     "maximum length": {
@@ -901,6 +904,9 @@
         },
         "Plusnet": {
             "result": "d;Ku%oSJnF<w1K*6"
+        },
+        "Starbreeze": {
+            "result": "qVMK|V0o9ujnkSRYr/[ZO5!oxE-co~tp"
         }
     },
     "minimum length - alternate": {
@@ -1353,6 +1359,9 @@
         },
         "Plusnet": {
             "result": ";I9x6-/w"
+        },
+        "Starbreeze": {
+            "result": "S3]wpx+<"
         }
     },
     "maximum length - alternate": {
@@ -1805,6 +1814,9 @@
         },
         "Plusnet": {
             "result": ";I9x6-/wyycg(#LT"
+        },
+        "Starbreeze": {
+            "result": "S3]wpx+<MF)z1+>J0D(hJ3)=FRL~,ldB"
         }
     },
     "default length": {
@@ -2257,6 +2269,9 @@
         },
         "Plusnet": {
             "result": "d;Ku%oSJnF<w1K*6"
+        },
+        "Starbreeze": {
+            "result": "qVMK|V0o9ujnkSRY"
         }
     },
     "default length - alternate": {
@@ -2709,6 +2724,9 @@
         },
         "Plusnet": {
             "result": ";I9x6-/wyycg(#LT"
+        },
+        "Starbreeze": {
+            "result": "S3]wpx+<MF)z1+>J"
         }
     }
 }

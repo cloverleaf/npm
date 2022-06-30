@@ -456,6 +456,13 @@
     "minLength": 8,
     "requirements": ["low", "num"]
   },
+  "Starbreeze": {
+    "minLength": 8,
+    "maxLength": 32,
+    "requirements": ["low", "num", "special", "cap"],
+    "chars": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!\"#$%&()*+,-./:;<=>?@[]^_|~",
+    "regex": "(?=.{8,}$)(?:(.)\\1?(?!\\1))+"
+  },
   "Steam": {
     "minLength": 8
   },
