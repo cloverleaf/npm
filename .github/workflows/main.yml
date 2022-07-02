@@ -1,6 +1,27 @@
 name: CI
 on: [push, pull_request]
 jobs:
+  test:
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+      with:
+        ref: ${{ github.head_ref }}
+
+    # Install dependencies
+    - uses: pnpm/action-setup@v2.2.2
+      with:
+        run_install: true
+
+    - name: Test
+      run: npm run test
+
+    - name: Save new test results
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Save new test results
+
   build:
 
     runs-on: ubuntu-latest
@@ -9,27 +30,15 @@ jobs:
       with:
         ref: ${{ github.head_ref }}
 
-    - name: Install dependencies
-      run: |
-        npm i
-        cd unit_tests
-        # sudo apt-get install xvfb firefox
-        python3 -m pip install -r requirements.txt
+    # Install dependencies
+    - uses: pnpm/action-setup@v2.2.2
+      with:
+        run_install: true
 
-    - name: Gecko setup
-      run: |
-        wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
-        sudo sh -c 'tar -x geckodriver -zf geckodriver-v0.24.0-linux64.tar.gz -O > /usr/bin/geckodriver'
-        sudo chmod +x /usr/bin/geckodriver
-        rm geckodriver-v0.24.0-linux64.tar.gz
-        export PATH=$PATH:/usr/bin/geckodriver
+    - name: Build
+      run: npm run build
 
-    - name: Test with pytest
-      run: |
-        cd unit_tests
-        python3 -m pytest -s
-
-    - name: Save new test results
+    - name: Save new build
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit_message: Save new test results
+        commit_message: Save new build

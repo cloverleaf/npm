@@ -1,13 +1,14 @@
-const jsonData = require('./data/sites.json')
+import js_sha3 from 'js-sha3'
+import seedrandom from 'seedrandom'
 
-const keccak512 = require('js-sha3').keccak512
-Math.seedrandom = require('seedrandom')
+import siteData from './data/sites.json' assert {type: 'json'}
+export { siteData }
 
-const defaultMinLength = 4
-const defaultMaxLength = 512
-const defaultLength = 16
+export const defaultMinLength = 4
+export const defaultMaxLength = 512
+export const defaultLength = 16
 
-const possibleRequirements = {
+export const possibleRequirements = {
   cap: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
   low: 'abcdefghijklmnopqrstuvwxyz',
   num: '0123456789',
@@ -22,7 +23,7 @@ const possibleRequirements = {
  * @param {number} length int - Desired length of the password
  * @returns {string} Output password
  */
-function process (appName, masterPass, presetToggle = false, length = defaultLength) {
+export function generate (appName, masterPass, presetToggle = false, length = defaultLength) {
   // Ensure types
   if (typeof appName !== 'string') throw new Error('App name must be a string')
   if (appName.length < 1) throw new Error('App name must be more than 0 characters')
@@ -42,54 +43,56 @@ function process (appName, masterPass, presetToggle = false, length = defaultLen
 
   // If there's a preset in use
   if (presetToggle) {
+
     // If it's a site with a preset
 
     try {
       // If it's an alias for another app
-      if (jsonData[appName].alias) {
+      if (siteData[appName].alias) {
         // Change the name of the app we're using to its alias
-        appName = jsonData[appName].alias
+        appName = siteData[appName].alias
       }
     } catch (TypeError) {
       throw new Error('Invalid preset')
     }
 
     // If it has a custom minLength
-    if ('minLength' in jsonData[appName]) {
+    if ('minLength' in siteData[appName]) {
       // Replace the default minLength with the supplied one.
-      minLength = jsonData[appName].minLength
+      minLength = siteData[appName].minLength
     }
 
     // If it has a custom maxLength
-    if ('maxLength' in jsonData[appName]) {
+    if ('maxLength' in siteData[appName]) {
       // Replace the default maxLength with the supplied one.
-      maxLength = jsonData[appName].maxLength
+      maxLength = siteData[appName].maxLength
     }
 
     // If it has a custom character set
-    if ('chars' in jsonData[appName]) {
+    if ('chars' in siteData[appName]) {
       // Replace the default character set with the supplied one.
-      chars = jsonData[appName].chars
+      chars = siteData[appName].chars
     }
 
     // If it has a regex
-    if ('regex' in jsonData[appName]) {
+    if ('regex' in siteData[appName]) {
       // Set the regex to match
       try {
-        regex = new RegExp(jsonData[appName].regex)
+        regex = new RegExp(siteData[appName].regex)
       } catch (SyntaxError) {
-        throw new Error(`Invalid regex from ${appName} "${jsonData[appName].regex}"`)
+        throw new Error(`Invalid regex from ${appName} "${siteData[appName].regex}"`)
       }
     }
 
-    if ('requirements' in jsonData[appName]) {
+    if ('requirements' in siteData[appName]) {
       // TODO This could be a map
-      for (let i = 0; i < jsonData[appName].requirements.length; i++) {
+      for (let i = 0; i < siteData[appName].requirements.length; i++) {
         requirements.push(
-          possibleRequirements[jsonData[appName].requirements[i]]
+          possibleRequirements[siteData[appName].requirements[i]]
         )
       }
     }
+
   }
 
   if (!(minLength <= length && length <= maxLength)) {
@@ -116,15 +119,15 @@ function process (appName, masterPass, presetToggle = false, length = defaultLen
   appName = appName.toLowerCase()
 
   // Set the generation seed
-  Math.seedrandom(keccak512(appName + masterPass))
+  let prng = new seedrandom(js_sha3.keccak_512(appName + masterPass))
 
   // password generation cycle
-  go = true
+  let go = true
   while (go) {
     result = ''
     while (result.length < length) {
       // Add one seeded random character at a time
-      result += chars[Math.floor(Math.random() * chars.length)]
+      result += chars[Math.floor(prng() * chars.length)]
     }
 
     // If there's requirements to forfill
@@ -179,13 +182,4 @@ function process (appName, masterPass, presetToggle = false, length = defaultLen
 
   // The password has been generated
   return result
-}
-
-module.exports = {
-  process,
-  siteData: jsonData,
-  defaultLength,
-  defaultMinLength,
-  defaultMaxLength,
-  possibleRequirements
 }

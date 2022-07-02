@@ -11,6 +11,9 @@
 					"type": "string",
 					"pattern": "^(?!.*(.).*\\1).+$"
 				},
+        "deprecated": {
+          "type": "boolean"
+        },
 				"maxLength": {
 					"minimum": 1,
 					"type": "integer"
@@ -37,8 +40,8 @@
 			},
 			"anyOf": [
 				{ "required": ["alias"]},
-				{"required": ["minLength"]}
-			],
+				{ "required": ["minLength"]}
+      ],
 			"type": "object",
 			"additionalProperties": false
 		}

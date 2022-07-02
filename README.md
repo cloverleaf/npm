@@ -3,6 +3,8 @@
 
 The brains behind Cloverleaf
 
+## API
+
 <a name="process"></a>
 
 ## process(appName, masterPass, presetToggle, length) ⇒ <code>string</code>
@@ -14,3 +16,15 @@ The brains behind Cloverleaf
 | masterPass | <code>string</code> |  |  |
 | presetToggle | <code>boolean</code> | <code>false</code> | True if we want to use a preset |
 | length | <code>number (int)</code> | 16 | Desired length of the password |
+
+<a name="siteData"></a>
+
+## siteData
+**Returns**: <code>object</code> - Data for preset sites
+
+
+## Contributing
+
+`
+pnpm i
+`
