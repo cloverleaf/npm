@@ -1,6 +1,10 @@
 require('esbuild').build({
   entryPoints: ['index.js'],
   bundle: true,
-  outfile: 'dist/minimized.js',
+  outfile: 'dist/browser.js',
   minify: true,
-}).catch(() => process.exit(1))
+  globalName: 'cloverleaf',
+}).catch((err) => {
+  console.log(err)
+  process.exit(1)
+})

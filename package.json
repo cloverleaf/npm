@@ -1,6 +1,6 @@
 {
   "name": "cloverleaf",
-  "version": "2.5.1",
+  "version": "2.5.2",
   "description": "The brains behind the Cloverleaf password app",
   "main": "index.js",
   "browser": "dist/minimized.js",
