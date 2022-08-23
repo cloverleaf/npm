@@ -1,3 +1,8 @@
+/*
+ * Copyright 2020 Allie Law <allie@cloverleaf.app>
+ * SPDX-License-Identifier: GPL-3.0-or-later
+*/
+
 import js_sha3 from 'js-sha3'
 import { prng_arc4 } from 'esm-seedrandom'
 

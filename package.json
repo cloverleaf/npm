@@ -15,7 +15,7 @@
     "url": "git+https://github.com/cloverleaf/npm.git"
   },
   "author": "ChildishGiant",
-  "license": "MIT",
+  "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/cloverleaf/npm/issues"
   },
