@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "chai": "^4.3.6",
-    "esbuild": "^0.14.48"
+    "esbuild": "^0.15.5",
+    "jsdoc-to-markdown": "^7.1.1"
   }
 }
