@@ -1,5 +1,5 @@
 import js_sha3 from 'js-sha3'
-import seedrandom from 'seedrandom'
+import { prng_arc4 } from 'esm-seedrandom'
 
 import siteData from './data/sites.json' assert {type: 'json'}
 export { siteData }
@@ -126,7 +126,7 @@ export function generate (appName, masterPass, presetToggle = false, length = de
   appName = appName.toLowerCase()
 
   // Set the generation seed
-  let prng = new seedrandom(js_sha3.keccak_512(appName + masterPass))
+  let prng = prng_arc4(js_sha3.keccak_512(appName + masterPass))
 
   // password generation cycle
   let go = true

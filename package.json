@@ -21,8 +21,8 @@
   },
   "homepage": "https://github.com/cloverleaf/npm#readme",
   "dependencies": {
-    "js-sha3": "^0.8.0",
-    "seedrandom": "^3.0.5"
+    "esm-seedrandom": "^3.0.5",
+    "js-sha3": "^0.8.0"
   },
   "devDependencies": {
     "chai": "^4.3.6",
