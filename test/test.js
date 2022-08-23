@@ -18,6 +18,12 @@ for (let config in configs) {
 
     let result = Cloverleaf.generate(site, configs[config].password, true, configs[config].length)
 
+    // This test only works on non-alias presets
+    if (!('alias' in sites[site])) {
+      let customResult = Cloverleaf.generate(site, configs[config].password, true, configs[config].length, sites[site])
+      assert.strictEqual(result, customResult, `Output differs when using a custom preset and built-in`)
+    }
+
     // If not already in results
     if (!config in results) {
       results[config] = {}
@@ -30,6 +36,14 @@ for (let config in configs) {
     } else {
       console.log(`Adding ${site} to config ${config}`)
       results[config][site] = {"result": result}
+    }
+
+    if ('minLength' in sites[site]) {
+      assert.isAtLeast(result.length, sites[site].minLength, `Minimum length not being respected`)
+    }
+
+    if ('maxLength' in sites[site]) {
+      assert.isAtMost(result.length, sites[site].maxLength, `Maximum length not being respected`)
     }
 
   }
