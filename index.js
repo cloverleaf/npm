@@ -19,8 +19,8 @@ export const possibleRequirements = {
  *
  * @param {string} appName Name of the app to generate a password for
  * @param {string} masterPass
- * @param {boolean} presetToggle True if we want to use a preset
- * @param {number} length int - Desired length of the password
+ * @param {boolean} [presetToggle=false] True if we want to use a preset
+ * @param {number} [length=16] int - Desired length of the password
  * @returns {string} Output password
  */
 export function generate (appName, masterPass, presetToggle = false, length = defaultLength) {
