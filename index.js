@@ -107,6 +107,7 @@ export function generate (appName, masterPass, presetToggle = false, length = de
 
   }
 
+  // Correct the desired password length to fit a preset
   if (!(minLength <= length && length <= maxLength)) {
     // if the length is invalid
     if (length > maxLength) {
