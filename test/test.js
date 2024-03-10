@@ -48,11 +48,13 @@ for (let config in configs) {
 
   }
 
-  // Write results to file
-  await writeFile("test/results.json", JSON.stringify(results, null, 2), function(err, result) {
-    if (err) console.error(err)
-  })
 }
+
+// Write results to file
+await writeFile("test/results.json", JSON.stringify(results, null, 2), function(err, result) {
+  if (err) console.error(err)
+})
+
 
 // Requirements lengths
 // Make sure the minimum length is more characters than the requirements
